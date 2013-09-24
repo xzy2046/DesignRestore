@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="@string/pre_key_basic"
+        android:title="@string/pref_title_basic" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_title_basic"
+            android:summary="@string/design_restore_summary"
+            android:title="@string/design_restore_title" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

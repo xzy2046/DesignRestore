@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DesignRestore</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+<!-- vibrate -->
+	<string name="pref_key_vibrate">pref_key_vibrate</string>
+
+<!--  preference -->
+	<string name="pre_key_basic">pre_key_basic</string>
+	<string name="pref_title_basic">Design Restore</string>
+	<string name="pre_key_design_restore">pre_key_key_restore</string>
+	<string name="design_restore_summary">Show design restore pad</string>
+	<string name="design_restore_title">Enable design restore</string>
+</resources>

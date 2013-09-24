@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pref_title_basic">设计还原</string>
+    <string name="design_restore_summary">显示设计还原悬浮窗口</string>
+    <string name="design_restore_title">设计还原窗口</string>
+
+</resources>
