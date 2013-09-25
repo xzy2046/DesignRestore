@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -84,6 +85,19 @@ public class DesignActivity extends PreferenceActivity {
             	Log.i("xzy", "DesignPadCheckBox");
             	if (newValue instanceof Boolean) {
             		Log.i("xzy", "values is : " + (Boolean)newValue);
+            		if (newValue == Boolean.TRUE) {
+            			try {
+							mIDesignService.addDesignPadView();
+						} catch (RemoteException e) {
+							e.printStackTrace();
+						}
+            		} else {
+            			try {
+							mIDesignService.removeDesignPadView();
+						} catch (RemoteException e) {
+							e.printStackTrace();
+						}
+            		}
             	}
                 return true;
             }

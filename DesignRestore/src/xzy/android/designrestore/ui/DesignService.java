@@ -40,6 +40,22 @@ public class DesignService extends Service {
                 }
             }
         }
+
+		@Override
+		public void removeDesignPadView() throws RemoteException {
+			if (mDesignPadManager == null) {
+            	mDesignPadManager = DesignPadManager.getInstance(DesignService.this);
+            }
+			DesignPadView designPadView = mDesignPadManager.getDesignPadView();
+            if (designPadView.isAttachedToWindow) {
+                try {
+                    mWinManager.removeView(mDesignPadManager.getDesignPadView());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+			
+		}
 	};
 
 	@Override

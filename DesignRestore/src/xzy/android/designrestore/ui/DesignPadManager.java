@@ -32,6 +32,10 @@ public class DesignPadManager {
     private int mScreenWidth;
     
     private int mScreenHeight;
+    
+    public static enum PAD_STATE {NORMAL, SMALL};
+    
+    private PAD_STATE mPadState;
 
     public DesignPadManager(Context context) {
         initialization(context);
@@ -50,6 +54,7 @@ public class DesignPadManager {
     
     private void initialization(Context context) {
         mContext = context;
+        mPadState = PAD_STATE.SMALL;
 
         DisplayMetrics metrics = new DisplayMetrics();
         ((WindowManager) mContext.getSystemService("window")).getDefaultDisplay().getMetrics(
@@ -101,5 +106,9 @@ public class DesignPadManager {
         isNeedVibrator = mSharedPreference.getBoolean(
                 mContext.getResources().getString(R.string.pref_key_vibrate), true);
         return isNeedVibrator;
+    }
+    
+    public PAD_STATE getPadState() {
+    	return mPadState;
     }
 }
